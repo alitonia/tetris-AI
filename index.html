@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tetris AI</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="fb-root"></div>
+<div class="container">
+    <h1 class="header">Tetris</h1>
+
+    <div class="game-container">
+        <canvas width="200px" height="400px" id="grid-canvas" class="grid"></canvas>
+        <div class="controls-container">
+            <div id="lv-container" class="lv-container">0</div>
+            <div id="score-container" class="score-container">0</div>
+            <div id="next-container" class="next-container">
+                <canvas id="next-canvas" class="next-canvas" width="80px" height="80px"></canvas>
+            </div>
+            <a id="ai-button" class="start-ai-button">Run AI</a>
+            <a id="reset-button" class="reset-button">Change Weight</a>
+            <div class="vector-container">
+                <div><input class="vector-input vector-1" placeholder="Height"/></div>
+                <div><input class="vector-input vector-2" placeholder="Line"/></div>
+                <div><input class="vector-input vector-3" placeholder="Hole"/></div>
+                <div><input class="vector-input vector-4" placeholder="Bumpiness"/></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="vector-display-container">
+        <div>
+            <h4 class="current-v vector-1"><span class="text">Height weight:</span><span class="val"></span></h4>
+        </div>
+        <div>
+            <h4 class="current-v vector-2"><span class="text">Line weight:</span><span class="val"></span></h4>
+        </div>
+        <div>
+            <h4 class="current-v vector-3"><span class="text">Hole weight:</span><span class="val"></span></h4>
+        </div>
+        <div>
+            <h4 class="current-v vector-4"><span class="text">Bumpiness weight:</span><span class="val"></span></h4>
+        </div>
+    </div>
+</div>
+
+<script src="js/polyfill.js"></script>
+<script src="js/grid.js"></script>
+<script src="js/piece.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/stopwatch.js"></script>
+<script src="js/game_manager.js"></script>
+<script src="js/random_piece_generator.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/changingScoreLogic.js"></script>
+
+<!--<script src="js/tuner.js"></script>-->
+<script>
+  GameManager()
+</script>
+
+</body>
+</html>
